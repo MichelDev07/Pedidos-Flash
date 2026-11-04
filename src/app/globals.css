@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Paleta Oficial Base — Pedidos Flash */
+  --pf-orange: #FF6B35;
+  --pf-orange-hover: #E85A24;
+  --pf-orange-active: #D14B18;
+  --pf-orange-soft: #FFF1EB;
+  --pf-navy: #172033;
+  --pf-navy-hover: #212E48;
+  --pf-navy-deep: #0B111E;
+  --pf-white: #FFFFFF;
+  --pf-gray-light: #F3F4F6;
+  --pf-green: #22C55E;
+  --pf-green-hover: #16A34A;
+  --pf-green-soft: #DCFCE7;
+
+  /* Superficies y Texto — Modo Claro */
+  --bg-canvas: #F3F4F6;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+  --bg-muted: #E5E7EB;
+  --text-primary: #172033;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --border-subtle: #E5E7EB;
+  --border-strong: #CBD5E1;
+
+  /* Semántica General */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-info: #3B82F6;
+
+  /* Estados KDS (ComandaStatus) — Modo Claro */
+  --kds-nuevo-bg: #FFF1EB;
+  --kds-nuevo-border: #FF6B35;
+  --kds-nuevo-text: #C2410C;
+
+  --kds-recibido-bg: #EFF6FF;
+  --kds-recibido-border: #3B82F6;
+  --kds-recibido-text: #1D4ED8;
+
+  --kds-preparando-bg: #FFFBEB;
+  --kds-preparando-border: #F59E0B;
+  --kds-preparando-text: #B45309;
+
+  --kds-listo-bg: #DCFCE7;
+  --kds-listo-border: #22C55E;
+  --kds-listo-text: #15803D;
+
+  --kds-entregado-bg: #F3F4F6;
+  --kds-entregado-border: #CBD5E1;
+  --kds-entregado-text: #475569;
+
+  /* Estados de Mesa (TableStatus) — Modo Claro */
+  --table-libre-bg: #FFFFFF;
+  --table-libre-border: #E5E7EB;
+  --table-libre-text: #15803D;
+  --table-libre-dot: #22C55E;
+
+  --table-ocupada-bg: #FFF7ED;
+  --table-ocupada-border: #FF6B35;
+  --table-ocupada-text: #C2410C;
+
+  --table-cobro-bg: #FEF3C7;
+  --table-cobro-border: #F59E0B;
+  --table-cobro-text: #B45309;
+
+  /* Semáforo SLA Antigüedad — Modo Claro */
+  --sla-normal-bg: #DCFCE7;
+  --sla-normal-border: #86EFAC;
+  --sla-normal-text: #15803D;
+
+  --sla-warn-bg: #FEF3C7;
+  --sla-warn-border: #FBBF24;
+  --sla-warn-text: #92400E;
+
+  --sla-critical-bg: #FEE2E2;
+  --sla-critical-border: #EF4444;
+  --sla-critical-text: #B91C1C;
+}
+
+.dark {
+  /* Ajustes de Marca en Oscuro */
+  --pf-orange-hover: #FF8255;
+  --pf-orange-active: #E85A24;
+  --pf-orange-soft: rgba(255, 107, 53, 0.16);
+  --pf-green-soft: rgba(34, 197, 94, 0.18);
+
+  /* Superficies y Texto — Modo Oscuro */
+  --bg-canvas: #0B111E;
+  --bg-surface: #172033;
+  --bg-elevated: #212E48;
+  --bg-muted: #1E293B;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --border-subtle: #26334D;
+  --border-strong: #3B4D6B;
+
+  /* Estados KDS (ComandaStatus) — Modo Oscuro */
+  --kds-nuevo-bg: rgba(255, 107, 53, 0.18);
+  --kds-nuevo-border: #FF6B35;
+  --kds-nuevo-text: #FF9E7A;
+
+  --kds-recibido-bg: rgba(59, 130, 246, 0.18);
+  --kds-recibido-border: #3B82F6;
+  --kds-recibido-text: #93C5FD;
+
+  --kds-preparando-bg: rgba(245, 158, 11, 0.18);
+  --kds-preparando-border: #F59E0B;
+  --kds-preparando-text: #FCD34D;
+
+  --kds-listo-bg: rgba(34, 197, 94, 0.2);
+  --kds-listo-border: #22C55E;
+  --kds-listo-text: #4ADE80;
+
+  --kds-entregado-bg: rgba(100, 116, 139, 0.16);
+  --kds-entregado-border: #475569;
+  --kds-entregado-text: #94A3B8;
+
+  /* Estados de Mesa (TableStatus) — Modo Oscuro */
+  --table-libre-bg: #172033;
+  --table-libre-border: #26334D;
+  --table-libre-text: #4ADE80;
+  --table-libre-dot: #22C55E;
+
+  --table-ocupada-bg: rgba(255, 107, 53, 0.14);
+  --table-ocupada-border: #FF6B35;
+  --table-ocupada-text: #FF9E7A;
+
+  --table-cobro-bg: rgba(245, 158, 11, 0.16);
+  --table-cobro-border: #F59E0B;
+  --table-cobro-text: #FCD34D;
+
+  /* Semáforo SLA Antigüedad — Modo Oscuro */
+  --sla-normal-bg: rgba(34, 197, 94, 0.18);
+  --sla-normal-border: #22C55E;
+  --sla-normal-text: #4ADE80;
+
+  --sla-warn-bg: rgba(245, 158, 11, 0.22);
+  --sla-warn-border: #F59E0B;
+  --sla-warn-text: #FDE68A;
+
+  --sla-critical-bg: #EF4444;
+  --sla-critical-border: #F87171;
+  --sla-critical-text: #FFFFFF;
+}
+
+@theme inline {
+  --color-brand: var(--pf-orange);
+  --color-brand-hover: var(--pf-orange-hover);
+  --color-brand-active: var(--pf-orange-active);
+  --color-brand-soft: var(--pf-orange-soft);
+  --color-navy: var(--pf-navy);
+  --color-navy-deep: var(--pf-navy-deep);
+  --color-ready: var(--pf-green);
+  --color-canvas: var(--bg-canvas);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+  --color-muted-surface: var(--bg-muted);
+  --color-fg: var(--text-primary);
+  --color-fg-secondary: var(--text-secondary);
+  --color-fg-muted: var(--text-muted);
+  --color-subtle: var(--border-subtle);
+  --color-strong: var(--border-strong);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+  }
+
+  /* Evitar auto-zoom en inputs móviles iOS Safari manteniendo >= 16px */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Ergonomía Táctil Gastronómica y Utilidades Clave */
+.touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+.touch-target-lg {
+  min-height: 56px;
+  min-width: 56px;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.pt-safe {
+  padding-top: max(0.5rem, env(safe-area-inset-top));
+}
+
+.mb-safe {
+  margin-bottom: env(safe-area-inset-bottom);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animaciones GPU-friendly para KDS y Sheets */
+@keyframes pf-pulse-new {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 107, 53, 0);
+  }
+}
+
+@keyframes pf-sheet-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pf-modal-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-kds-new {
+  animation: pf-pulse-new 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-sheet-up {
+  animation: pf-sheet-up 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-modal-pop {
+  animation: pf-modal-pop 160ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kds-new,
+  .animate-sheet-up,
+  .animate-modal-pop {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Pedidos Flash">
+  <title>Pedidos Flash</title>
+  <rect width="512" height="512" rx="112" fill="#172033" />
+  <circle cx="256" cy="148" r="22" fill="#FFFFFF" />
+  <path
+    d="M104 332C104 248.053 172.053 180 256 180C339.947 180 408 248.053 408 332H104Z"
+    fill="#FFFFFF"
+  />
+  <rect x="84" y="352" width="344" height="34" rx="17" fill="#FFFFFF" />
+  <path
+    d="M288 108L192 268H262L224 412L338 236H264L288 108Z"
+    stroke="#172033"
+    stroke-width="26"
+    stroke-linejoin="round"
+  />
+  <path d="M288 108L192 268H262L224 412L338 236H264L288 108Z" fill="#FF6B35" />
+</svg>
