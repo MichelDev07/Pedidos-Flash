@@ -59,3 +59,4 @@ pnpm test:unit
 # Verificación de seguridad de variables de entorno
 pnpm security:check
 ```
+

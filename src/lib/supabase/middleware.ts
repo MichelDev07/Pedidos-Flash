@@ -20,7 +20,8 @@ export function isExcludedFromAuthMiddleware(pathname: string): boolean {
     pathname.startsWith("/api/health/") ||
     pathname.startsWith("/icons/") ||
     pathname === "/icons" ||
-    pathname.startsWith("/_next/")
+    pathname.startsWith("/_next/") ||
+    pathname.startsWith("/auth/")
   ) {
     return true;
   }

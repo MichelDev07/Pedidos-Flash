@@ -3,6 +3,8 @@ export const TEST_IDS = {
     EMAIL_INPUT: "login-email-input",
     PASSWORD_INPUT: "login-password-input",
     SUBMIT_BTN: "login-submit-btn",
+    GOOGLE_BTN: "login-google-btn",
+    APPLE_BTN: "login-apple-btn",
     ERROR_ALERT: "login-error-alert",
     LOGOUT_BTN: "nav-logout-btn",
   },
